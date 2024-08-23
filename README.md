@@ -9,7 +9,7 @@
 </table>
 
 # Sobre el proyecto
-Este proyecto es una página web desarrollada para un alojamiento rural ubicado en Buenos Aires, Argentina. El objetivo principal del sitio es proporcionar una plataforma sencilla y accesible para que los visitantes conozcan el alojamiento y puedan ponerse en contacto fácilmente con el dueño.
+Este proyecto es una página web desarrollada para un alojamiento rural ubicado en Buenos Aires, Argentina. El objetivo principal del sitio es proporcionar una plataforma sencilla y accesible para que los visitantes conozcan el alojamiento y puedan ponerse en contacto fácilmente con el dueño. <br>
 Sitio web ➡︎ https://www.villacristinarg.com/
 ## Caracteristicas 
 Desarrollada con HTML5, TAILWIND CSS, JavaScript Y PHP. 
