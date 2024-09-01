@@ -8,9 +8,26 @@
   </tr>
 </table>
 
-# Sobre el proyecto
-Este proyecto es una página web desarrollada para un alojamiento rural ubicado en Buenos Aires, Argentina. El objetivo principal del sitio es proporcionar una plataforma sencilla y accesible para que los visitantes conozcan el alojamiento y puedan ponerse en contacto fácilmente con el dueño. <br>
-Sitio web ➡︎ https://www.villacristinarg.com/
-## Caracteristicas 
-Desarrollada con HTML5, TAILWIND CSS, JavaScript Y PHP. 
+## 🏡 **Descripción del Proyecto**
+
+**Villa Cristina** es un sitio web dinámico y atractivo diseñado para un alojamiento rural en Buenos Aires, Argentina. Este proyecto tiene como objetivo ofrecer una experiencia de usuario intuitiva y accesible para que los visitantes conozcan el alojamiento y puedan ponerse en contacto fácilmente con el anfitrion de la Villa.<br>
+🔗 [Visita el sitio web](https://www.villacristinarg.com/)
+
+## 🛠️ **Tecnologías Utilizadas**
+
+- **HTML5**: Estructuración semántica del contenido.
+- **Tailwind CSS**: Framework de CSS para diseño modular y personalizado.
+- **JavaScript**: Para funcionalidades interactivas y manipulación del DOM.
+- **Alpine.js**: Para agregar funcionalidades reactivas sin sobrecargar el proyecto.
+- **email.js**: Para el manejo del envío de correos electrónicos de manera sencilla.
+- **Font Awesome**: Para iconos escalables y personalizables.
+- **Google Fonts**: Amplia selección de fuentes tipográficas para mejorar la estética del sitio.
+
+## 📈 **Objetivos del Proyecto**
+
+- **Optimización del SEO**: Implementación de buenas prácticas para mejorar la visibilidad en buscadores.
+
+
+
+
 
