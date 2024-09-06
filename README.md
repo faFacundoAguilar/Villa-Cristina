@@ -16,13 +16,13 @@
 ## 🛠️ **Tecnologías Utilizadas**
 
 - **HTML5**: Estructuración semántica del contenido.
-- **Tailwind CSS**: Framework de CSS para diseño modular y personalizado.
+- **Tailwind CSS**: Framework de CSS para un diseño modular y personalizado.
 - **JavaScript**: Para funcionalidades interactivas y manipulación del DOM.
 - **Alpine.js**: Para agregar funcionalidades reactivas sin sobrecargar el proyecto.
 - **email.js**: Para el manejo del envío de correos electrónicos de manera sencilla.
-- **Font Awesome**: Para iconos escalables y personalizables.
-- **Google Fonts**: Amplia selección de fuentes tipográficas para mejorar la estética del sitio.
-
+- **Font Awesome**: Para iconos.
+- **Google Fonts**: Fuentes.
+  
 ## 📈 **Objetivos del Proyecto**
 
 - **Optimización del SEO**: Implementación de buenas prácticas para mejorar la visibilidad en buscadores.
