@@ -16,7 +16,7 @@
 ## 🛠️ **Tecnologías Utilizadas**
 
 - **HTML5**: Estructuración semántica del contenido.
-- **Tailwind CSS**: Framework de CSS para un diseño modular y personalizado. Responsive
+- **Tailwind CSS**: Framework de CSS para un diseño modular y personalizado. Responsive.
 - **JavaScript**: Para funcionalidades interactivas y manipulación del DOM.
 - **Alpine.js**: Para agregar funcionalidades reactivas sin sobrecargar el proyecto.
 - **email.js**: Para el manejo del envío de correos electrónicos de manera sencilla.
