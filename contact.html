@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Cristina - Casa Rural - Casa de Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-zKiq/gdWPJgO6QIBtXHqEnT9lXyT4NXYPM3J3E4doaGLmFTHvrDWI6+eSG8e9Y4R9sJjVdD+00P9S5ubpWx+Fw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!--FUENTE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Caveat:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+CU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"> 
+    <style>
+body {
+          font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('imagenes/clasico.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+.background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with 60% opacity */
+            z-index: -1; /* Place behind other content */
+        }
+.nav-link {
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s, border-color 0.3s;
+        }
+.nav-link:hover {
+            color: #1d4ed8; /* Blue color on hover */
+            border-bottom-color: #1d4ed8; /* Blue border on hover */
+      }
+
+.field {
+margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}
+.icon-container {
+display: flex;
+justify-content: center;
+margin-top: 8px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <!-- Background overlay -->
+    <div class="background-overlay"></div> 
+    <!-- header -->
+    <div id="header" class="fixed top-0 left-0 right-0 z-50 py-2 header-bg text-white transition-transform transform">
+        <div x-data="{ open: false }" class="max-w-screen-xl mx-auto px-4 py-3 md:flex md:justify-between md:items-center md:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="#">
+                    <img src="Villa_cri__1_-logo.png" alt="Villa Cristina Logo" class="h-12 lg:h-16">
+                </a>     
+                <button @click="open = !open" class="md:hidden rounded-lg focus:outline-none focus:shadow-outline">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'block': open, 'hidden': !open}" class="flex-col flex-grow items-center justify-center md:flex md:flex-row md:space-x-4">
+              <ul class="space-y-2 list-none lg:space-y-0 lg:items-center lg:inline-flex">
+                  <li>
+                      <a href="nosotros.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Nosotros</a>
+                  </li>
+                  <li>
+                      <a href="galeria.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Galeria</a>
+                  </li>
+                  <li>
+                      <a href="contact.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Como Reservar?</a>
+                  </li>
+                  <li>
+                      <a href="ubicacion.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Ubicacion</a>
+                  </li>
+              </ul>
+          </nav>
+        </div>
+    </div>
+    <br>
+ 
+    <!-- Contenedor para centrar el formulario y darle espacio -->
+<section class="pt-20 pb-10">
+  <div class="max-w-lg mx-auto mt-10">
+    <p class="text-4xl text-pink-500 mb-8 text-center font-bold" style="font-family: 'Caveat', sans-serif;">Si necesitas más información o quieres reservar tu estancia, completa siguiente formulario o tambien pinchando en el boton de whatsapp. Te responderemos a la brevedad.</p>
+  <!-- Contenedor para el ícono -->
+  <div class="icon-container">
+    <lord-icon
+        src="https://cdn.lordicon.com/nqisoomz.json"
+        trigger="hover"
+        style="width:80px;height:80px">
+    </lord-icon>
+</div>
+
+    <!-- Formulario de contacto -->
+  <form id="form" class="space-y-4 p-6 bg-gray-800 rounded-lg shadow-md max-w-lg mx-auto mt-5">
+    <!-- Campo para el nombre -->
+    <div class="field">
+      <label for="name" class="block text-white text-sm font-medium mb-1">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="w-full p-3 text-sm text-gray-900 placeholder-gray-500 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent "
+        placeholder="Tu nombre"
+      />
+    </div>
+
+    <!-- Campo para el correo electrónico -->
+    <div class="field">
+      <label for="email" class="block text-white text-sm font-medium mb-1">Correo Electrónico</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="w-full p-3 text-sm text-gray-900 placeholder-gray-500 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+        placeholder="Tu correo electrónico"
+      />
+    </div>
+
+    <!-- Campo para el mensaje -->
+    <div class="field">
+      <label for="message" class="block text-white text-sm font-medium mb-1">Mensaje</label>
+      <textarea
+        name="message"
+        id="message"
+        class="w-full p-3 text-sm text-gray-900 placeholder-gray-500 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+        placeholder="Escribe tu mensaje aquí"
+        rows="4"
+      ></textarea>
+    </div>
+
+    <!-- Botón de envío -->
+    <div class="field">
+      <button
+        type="submit"
+        id="button"
+        class="w-full py-3 px-4 text-base font-semibold text-white bg-gradient-to-br from-pink-600 to-orange-500 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:from-pink-500 hover:to-orange-400 focus:outline-none focus:ring-4 focus:ring-pink-300"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+  
+  <div class="flex justify-center mt-8">
+    <a href="https://wa.me/+5492214637747" target="_blank" aria-label="Contactar por WhatsApp" class="flex items-center justify-center w-16 h-16 bg-green-500 text-white text-3xl rounded-full border-4 border-white shadow-lg hover:bg-green-600 transition-colors">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+</section>
+
+<!--Footer-->
+<footer class="flex flex-col items-center justify-between px-4 py-12 mx-auto max-w-7xl md:flex-row">
+  <p class="mb-8 text-sm text-center text-white md:text-left md:mb-0">© Villa Cristina . All Rights Reserved.</p>
+  <div class="flex items-center space-x-6">
+    <a href="https://www.instagram.com/quinta_villa_cristinarg/">
+      <span class="sr-only">Instagram</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 2500" width="2500" height="2500" class="w-5 h-5" aria-hidden="true">
+        <defs>
+          <radialGradient id="0" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse">
+            <stop offset=".09" stop-color="#fa8f21" />
+            <stop offset=".78" stop-color="#d82d7e" />
+          </radialGradient>
+          <radialGradient id="1" cx="1516.14" cy="2623.81" r="2572.12" gradientUnits="userSpaceOnUse">
+            <stop offset=".64" stop-color="#8c3aaa" stop-opacity="0" />
+            <stop offset="1" stop-color="#8c3aaa" />
+          </radialGradient>
+        </defs>
+        <path
+          d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57"
+          fill="url(#0)"
+        />
+        <path
+          d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57"
+          fill="url(#1)"
+        />
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/p/Quinta-Villa-Cristina-100063540562622/">
+      <span class="sr-only">Facebook</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1298" height="2500" viewBox="88.428 12.828 107.543 207.085" class="w-5 h-5" aria-hidden="true">
+        <path
+          d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z"
+          fill="#3c5a9a"
+        />
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<!--JS Formulario-->
+<script>
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+  .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_ppf1ey9';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.value = 'Send Email';
+        window.location.href = 'success.html'; // Redirige a la página de 'Mensaje enviado correctamente'
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+});
+</script>
+
+</script>
+   <!-- Alpine.js -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('BWuVjnxnfJULyuGrO')
+</script>
+
+</body>
+</html>
