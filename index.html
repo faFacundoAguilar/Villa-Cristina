@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css">
+    <meta name="description" content="Villa Cristina, es una casa de campo ubicada en Buenos aires, Ruta 11 km 25 Magdalena, a 25 minutos de la Ciudad de La plata, en un entorno rural único donde puedes disfrutar de la tranquilidad y todas las comodidades para una estancia inolvidable. Descubre nuestras instalaciones y vive la experiencia.">
+    
+    <!--Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="imagenes/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon-16x16.png">
+  <link rel="manifest" href="imagenes/site.webmanifest">
+  <link rel="mask-icon" href="imagenes/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <!----> 
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-zKiq/gdWPJgO6QIBtXHqEnT9lXyT4NXYPM3J3E4doaGLmFTHvrDWI6+eSG8e9Y4R9sJjVdD+00P9S5ubpWx+Fw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+CU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Timmana&display=swap" rel="stylesheet">
+
+ <!--FUENTE-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <title>Villa Cristina - Casa Rural - Casa de Campo</title>
+</head>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
+<body>
+    <body class="bg-gray-100">
+     <!--Header--> 
+      <div id="header" class="fixed top-0 left-0 right-0 z-50 py-2 bg-transparent bg-opacity-0 text-white transition-transform transform">
+        <div x-data="{ open: false }" class="max-w-screen-xl mx-auto px-4 py-3 md:flex md:justify-between md:items-center md:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <a href="index.html">
+                    <img src="Villa_cri__1_-logo.png" alt="Villa Cristina Logo" class="h-12 lg:h-16 text-white">
+                </a>     
+                <button @click="open = !open" class="md:hidden rounded-lg focus:outline-none focus:shadow-outline">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'block': open, 'hidden': !open}" class="flex-col flex-grow items-center justify-center md:flex md:flex-row md:space-x-4">
+                <ul class="space-y-2 list-none lg:space-y-0 lg:items-center lg:inline-flex">
+                    <li>
+                        <a href="nosotros.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="galeria.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Como Reservar?</a>
+                    </li>
+                    <li>
+                        <a href="ubicacion.html" class="block px-4 py-2 text-xl border-b-2 border-transparent hover:border-blue-600 text-gray-300 hover:text-blue-500 md:border-b-0 md:py-6 md:px-3 md:hover:border-blue-600">Ubicacion</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--Pantalla de Inicio /Parallex slider -->
+    <div class="hero-slider" carousel>
+        <div class="carousel-cell" style="background-image: url(imagenes/entrada.jpeg);">
+            <div class="gradient"></div>
+            <div class="info-container">
+          <h2 class="text-6xl font-bold text-gray-300 mb-4 " style="font-family: 'Dancing Script', cursive;">Villa Cristina</h2>
+                <a href="#presentacion" class="button-link">
+                <button>Descubre mas</button>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-cell" style="background-image: url(imagenes/clasico.jpg);">
+            <div class="gradient"></div>
+            <div class="info-container">
+                <h3 class="header">La calma de nuestro entorno</h3>
+                <a href="#presentacion" class="button-link">
+                <button>Descubre mas</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="carousel-cell" style="background-image: url(imagenes/relanpago.jpg);">
+            <div class="gradient"></div>
+            <div class="info-container">
+                <h3 class="header">Nuestros caballos</h3>
+          <a href="galeria.html" class="button-link">
+                <button>Descubre mas</button>
+              </a>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="px-4 py-24 mx-auto max-w-7xl">
+        <div class="w-full mx-auto md:w-5/6">
+          <div class="text-left md:text-center">
+            <p class="mb-8 text-lg font-bold tracking-widest text-purple-800 uppercase">Experiencias autenticas</p>
+            <h1 class="mb-10 font-serif text-xl italic font-thin text-gray-800 md:leading-snug md:text-3xl animate-wiggle-more animate-twice ">
+              “Disfruta de momentos únicos en nuestra casa de campo. Esta joya de alojamiento combina la tranquilidad del entorno con todas las comodidades que necesitas para una estadía inolvidable.
+              Nuestra versatilidad nos permite adaptarnos a tus planes.”
+            </h1>
+          </div>
+          <div class="flex items-center justify-start md:justify-center">
+            <div class="avatar" style="width: 80px; height: 80px; border-radius: 50%; overflow: hidden;">
+              <img src="imagenes/11.png" alt="Photo of Praveen Juge" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="ml-4">
+              <p class="mb-1 text-xs font-semibold tracking-widest text-gray-800 uppercase">Rincones de Encanto.</p>
+              <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase"> Crea recuerdos</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!--SECCION 1 - Tarjetas de visualización de secciones del Alojamiento-->
+<div class="container mx-auto mt-8" id="other-cards">
+  <div class="flex flex-wrap justify-center">
+    <!-- Parque y espacios verdes -->
+    <div class="py-3 m-4 w-11/12 md:w-1/4">
+      <a href="galeria.html">
+      <div class="group relative block bg-black">
+        <img alt="Parque" src="imagenes/parquepanoramica.JPG" class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"/>
+      
+        <div class="relative p-4 sm:p-6 lg:p-8">
+          <p class="text-sm font-bold uppercase tracking-widest text-pink-500">Espacios Verdes🌲</p>
+          <p class="text-xl font-bold text-transparent sm:text-2xl">Espacio arbolado y claros verdes</p>
+          <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-transparent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    </div>
+    <!-- Habitaciones-->
+    <div class="py-3 m-4 w-11/12 md:w-1/4">
+      <a href="galeria.html">
+      <div class="group relative block bg-black">
+        <img alt="Habitaciones" src="imagenes/habi02.jpg" class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"/>
+        <div class="relative p-4 sm:p-6 lg:p-8">
+          <p class="text-sm font-bold uppercase tracking-widest text-pink-500">Habitaciones✓</p>
+          <p class="text-xl font-bold text-transparent sm:text-2xl">Habitaciones amplias y luminicas</p>
+          <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-transparent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    </div>
+    <!-- Cocina-->
+    <div class="py-3 m-4 w-11/12 md:w-1/4">
+      <a href="galeria.html">
+      <div class="group relative block bg-black">
+        <img alt="Cocina" src="imagenes/photo420.jpg" class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"/>
+        <div class="relative p-4 sm:p-6 lg:p-8">
+          <p class="text-sm font-bold uppercase tracking-widest text-pink-500">Cocina♨️</p>
+          <p class="text-xl font-bold text-transparent sm:text-2xl">Todos los accesorios para tus comidas</p>
+          <div class="mt-32 sm:mt-48 lg:mt-64">
+            <div class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+              <p class="text-sm text-transparent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+</div>
+
+  <br></br>
+
+  <!--Steps-->
+  <div class="flex justify-center items-center space-x-4">
+    <!-- Step 1-->
+    <div class="flex items-center space-x-2">
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 text-white shadow-lg">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="text-sm font-semibold text-gray-700">Explora</div>
+    </div>
+
+    <div class="h-1 w-16 bg-gray-300"></div> <!-- Línea entre steps -->
+
+    <!-- Step 2-->
+    <div class="flex items-center space-x-2">
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 text-white shadow-lg">
+        <i class="fas fa-phone"></i>
+      </div>
+      <div class="text-sm font-semibold text-gray-700">Contacta</div>
+    </div>
+
+    <div class="h-1 w-16 bg-gray-300"></div> <!-- Línea entre steps -->
+
+    <!-- Step 3-->
+    <div class="flex items-center space-x-2">
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700 text-white shadow-lg">
+        <i class="fas fa-calendar-check"></i>
+      </div>
+      <div class="text-sm font-semibold text-gray-700">Reserva</div>
+    </div>
+  </div>
+
+
+
+
+<!--SECCION 2-->
+<section class="text-gray-600 body-font" id="presentacion">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-5xl text-5xl font-medium title-font mb-4 text-gray-900" style="font-family: 'Dancing Script', cursive;">Rincones de encanto </h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-lg text-black" >Cada espacio de Villa Cristina ofrece una mezcla perfecta de encanto colonial, comodidad moderna y variedad de instalaciones que inivita a un escape perfecto.</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="imagenes/recepcion.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Recepcion</h2>
+            <h1 class="title-font text-xl font-medium text-gray-900 mb-3"style="font-family: 'Caveat', sans-serif;">Armonía</h1>
+            <p class="leading-relaxed">La zona de recepción es el primer punto de encuentro, aqui te damos la bienvenida en un ambiente campero.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="imagenes/pisciona05.JPG">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Piscina</h2>
+            <h1 class="title-font text-xl font-medium text-gray-900 mb-3"style="font-family: 'Caveat', sans-serif;">Serenidad</h1>
+            <p class="leading-relaxed">El lugar perfecto para relajarse y refrescarse durante los cálidos días de verano en Villa Cristina.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="imagenes/stackasado.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Parrilla, asador..</h2>
+            <h1 class="title-font text-xl font-medium text-gray-900 mb-3"style="font-family: 'Caveat', sans-serif;">Pureza</h1>
+            <p class="leading-relaxed">Nuestro asador y parrilla es el corazón de las reuniones familiares, donde se disfrutan los mejores asados en compañía de seres queridos.</p>
+          </div>
+        </div>   
+      </div>                                   
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="imagenes/sunset.jpeg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Senderos</h2>
+            <h1 class="title-font text-xl font-medium text-gray-900 mb-3"style="font-family: 'Caveat', sans-serif;">Libertad</h1>
+            <p class="leading-relaxed">Los atardeceres son momentos mágicos que invitan a la reflexión y la serenidad. Un desanso encantadado por tu libertad.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="imagenes/casaportada.jpg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Nuestro refugio</h2>
+            <h1 class="title-font text-xl font-medium text-gray-900 mb-3"style="font-family: 'Caveat', sans-serif;">Colonial</h1>
+            <p class="leading-relaxed">La casa colonial es una joya arquitectónica que combina el encanto histórico con todas las comodidades modernas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="imagenes/fuentenocturna.JPG">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">La calma</h2>
+            <h1 class="title-font text-xl font-medium text-gray-900 mb-3"style="font-family: 'Caveat', sans-serif;">Simplicidad</h1>
+            <p class="leading-relaxed">Las noches aqui transforman el espacio en un oasis de paz, donde el silencio y la frescura nocturna te envuelven.</p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--SECCION 3 - DETALLES DE LA CASA-->
+<section class="px-4 py-24 mx-auto max-w-7xl">
+  <!-- Primer Bloque -->
+  <div class="grid items-center grid-cols-1 mb-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
+    <!-- Texto del Primer Bloque -->
+    <div>
+      <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Nuestro Campo: rodeado de pinos y naturaleza</h2>
+      <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+        Imagina despertar cada mañana con el suave canto de los pájaros y el frescor del aire campero.
+        Un retorno a lo esencial, un respiro de la prisa interminable y las distracciones de la ciudad. 
+      </p>
+      <div class="flex justify-center gap-4 sm:justify-start">
+       <div class="flex justify-center gap-4 sm:justify-start">
+          <!-- boton Call to action -->
+          <a
+            class="inline-flex items-center gap-2 rounded border border-indigo-600 px-8 py-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
+            href="nosotros.html"
+          >
+            <span class="text-sm font-medium">Conocer mas</span>
+        
+            <svg
+              class="w-5 h-5 rtl:rotate-180"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagen de fondo del primer Bloque -->
+    <div class="w-full h-full py-48 bg-gray-200 bg-cover bg-center" style="background-image: url('imagenes/casacorner.jpg');"></div>
+  </div>
+<!-- Segundo Bloque -->
+<div class="grid flex-col-reverse items-center grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24">
+  <!-- Texto del segundo Bloque -->
+  <div class="order-none md:order-2">
+    <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Espacios recreativos.</h2>
+    <p class="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
+      Desde espacios abiertos hasta acogedoras áreas privadas, te ofrecemos un equilibrio perfecto entre relax y naturaleza.
+      Disfruta del entorno, sin renunciar a las comodidades modernas que hacen de su estancia una experiencia inolvidable.
+    </p>
+    <!--iconos dinamicos-->
+    <div class="flex justify-center gap-4 sm:justify-start">
+    
+<lord-icon
+src="https://cdn.lordicon.com/epietrpn.json"
+trigger="loop"
+style="width:60px;height:60px">
+</lord-icon>
+
+
+<lord-icon
+    src="https://cdn.lordicon.com/pbhjpofq.json"
+    trigger="loop"
+    style="width:50px;height:60px">
+</lord-icon>
+
+      
+  <lord-icon
+    src="https://cdn.lordicon.com/rmhtxunj.json"
+    trigger="loop"
+    style="width:60px;height:60px">
+</lord-icon>
+    </div>
+  </div>
+  <!-- Imagen de Fondo del Segundo Bloque -->
+  <div class="w-full h-full py-48 bg-gray-200 bg-cover bg-center" style="background-image: url('imagenes/parquequincho.JPG');"></div>
+</div>
+</section>
+
+
+
+<!--SECCION 4 - SERVICIOS -->
+<section class="px-4 py-20 mx-auto max-w-7xl">
+  <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Nuestros Servicios</h2>
+  <p class="mb-16 text-lg text-gray-700">En nuestro alojamiento, nos enorgullece ofrecer una amplia gama de comodidades y servicios diseñados para brindarte una experiencia inolvidable. Conéctate con la naturaleza y disfruta de lo que Villa Cristina tiene para ofrecer.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 lg:gap-x-24 gap-y-20">
+      <!-- WiFi -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-blue-600 bg-blue-100 rounded-full">
+              <i class="fas fa-wifi"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">WiFi</h3>
+          <p class="text-sm text-gray-700">Disfruta de conexión a internet de alta velocidad en todas las áreas del alojamiento.</p>
+      </div>
+      <!-- Estacionamiento -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-yellow-600 bg-yellow-100 rounded-full">
+              <i class="fas fa-parking"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Estacionamiento</h3>
+          <p class="text-sm text-gray-700">Estacionamiento gratuito disponible para todos nuestros huéspedes.</p>
+      </div>
+      <!-- Senderismo -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-green-600 bg-green-100 rounded-full">
+              <i class="fas fa-hiking"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Senderismo</h3>
+          <p class="text-sm text-gray-700">Descubre rutas de senderismo en la naturaleza circundante.</p>
+      </div>
+      <!-- Cocina -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-red-600 bg-red-100 rounded-full">
+              <i class="fas fa-utensils"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Cocina</h3>
+          <p class="text-sm text-gray-700">Acceso a cocina completamente equipada para preparar tus comidas favoritas.</p>
+      </div>
+      <!-- Spa -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-pink-600 bg-pink-100 rounded-full">
+              <i class="fas fa-spa"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Spa</h3>
+          <p class="text-sm text-gray-700">Relájate y rejuvenece en nuestro spa.</p>
+      </div>
+      <!-- Paseos a Caballo -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-orange-600 bg-orange-100 rounded-full">
+              <i class="fas fa-horse"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Establos</h3>
+          <p class="text-sm text-gray-700">Explora los alrededores con nuestros paseos a caballo guiados(Adicional).</p>
+      </div>
+      <!-- Música -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-purple-600 bg-purple-100 rounded-full">
+              <i class="fas fa-music"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">karaoke</h3>
+          <p class="text-sm text-gray-700">Disfruta y canta en vivo en nuestra área de karaoke.</p>
+      </div>
+      <!-- Bar -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-teal-600 bg-teal-100 rounded-full">
+              <i class="fas fa-cocktail"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Bar</h3>
+          <p class="text-sm text-gray-700">Relájate con una bebida en nuestro barra.</p>
+      </div>
+      <!-- Piscina -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-blue-600 bg-blue-100 rounded-full">
+              <i class="fas fa-swimming-pool"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Piscina</h3>
+          <p class="text-sm text-gray-700">Disfruta de nuestra piscina al aire libre con impresionantes vistas.</p>
+      </div>
+      <!-- Juegos -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-indigo-600 bg-indigo-100 rounded-full">
+              <i class="fas fa-gamepad"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Entretenimientos</h3>
+          <p class="text-sm text-gray-700">Variedad de juegos para todas las edades.</p>
+      </div>
+      <!-- Naturaleza -->
+      <div>
+          <div class="flex items-center justify-center w-8 h-8 mb-4 text-green-600 bg-green-100 rounded-full">
+              <i class="fas fa-tree"></i>
+          </div>
+          <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Naturaleza</h3>
+          <p class="text-sm text-gray-700">Conéctate con la naturaleza en nuestros parque y senderos aledaños.</p>
+      </div>
+      <!-- Habitaciones -->
+      <div>
+        <div class="flex items-center justify-center w-8 h-8 mb-4 text-yellow-600 bg-yellow-100 rounded-full">
+          <i class="fas fa-fire w-5 h-5"></i>
+        </div>
+        <h3 class="mb-2 text-base font-semibold leading-tight text-gray-900">Club House</h3>
+        <p class="text-sm text-gray-700">Áreas equipada con barra y karaoke.</p>
+      </div>
+      <div>
+</section>
+
+
+<!--SECCION 5 - video -->
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:ml-6 lg:ml-8"> 
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Descubre el campo
+        <br class="hidden lg:inline-block">en comodidad y naturaleza
+      </h1>
+      <p class="mb-8 leading-relaxed">Nos destacamos por la atención personalizada que ofrecemos a cada huésped, asegurándonos de que te sientas como en casa. Como proyecto sustentable y sostenible, cuidamos el medio ambiente mientras valoramos las actividades rurales, y la posibilidad de relajarte en amplios espacios verdes rodeados de naturaleza. ¡Anímate a conocernos! </p>
+      <div class="flex justify-center">
+        <a href="https://www.instagram.com/quinta_villa_cristinarg/" class="icon-btn instagram">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com/p/Quinta-Villa-Cristina-100063540562622/" class="icon-btn facebook ml-4">
+          <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+      </div>
+    </div>
+    <div class="lg:max-w-2xl lg:w-full md:w-1/2 w-5/6">
+      <div class="w-full lg:w-10/12">
+        <!-- Plugin de Facebook -->
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F976446063496246&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<br></br>
+
+<!-- SECCION 6 - MAPA DE UBICACION -->
+<section class="w-full h-96 overflow-hidden relative">
+  <div class="absolute inset-0">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29660.256276682037!2d-57.73261076767406!3d-34.99348381152221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2f5ef8915e8b1%3A0x2ca6d2fccb445f7!2sQuinta%20Villa%20Cristina!5e0!3m2!1ses-419!2ses!4v1719864801202!5m2!1ses-419!2ses" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!--Seccion 7 - Collage fotos-->
+<section class="text-gray-400 bg-transparent body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col">
+      <div class="h-1 bg-gray-800 rounded overflow-hidden">
+        <div class="w-24 h-full bg-pink-500"></div>
+      </div>
+      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+        <h1 class="sm:w-2/5 text-black font-medium title-font text-3xl mb-2 sm:mb-0" style="font-family: 'Caveat', sans-serif;">Asado, familia y amigos</h1>
+        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 font-poppins text-black">Nuestro casa de campo ofrece una experiencia completa en un entorno rural, con entretenimientos y actividades para todas las edades. Ya sea que busques un lugar para descansar o conectar con la naturaleza, nuestra casa de campo es el destino perfecto para tu próxima escapada. 🌾</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="imagenes/pelao.jpg">
+        </div>
+        <h2 class="text-3xl font-medium title-font text-black mt-5" style="font-family: 'Caveat', sans-serif;">Entretenimientos</h2>
+       
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="imagenes/senderos2.jpg">
+        </div>
+        <h2 class="text-3xl font-medium title-font text-black mt-5" style="font-family: 'Caveat', sans-serif;">Senderos</h2>
+       
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="imagenes/asadoalasador.jpg">
+        </div>
+        <h2 class="text-3xl font-medium title-font text-black mt-5" style="font-family: 'Caveat', sans-serif;">Campo</h2>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--TESTIMONIOS-->
+<section class="text-gray-400 bg-gray-100 body-font">
+  <div class="container px-5 py-8 mx-auto">
+    <h1 class="text-5xl title-font text-black mb-12 text-center" style="font-family: 'Caveat', sans-serif;">Testimonios</h1>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-800 bg-opacity-80 p-8 rounded bg-cover bg-center bg-no-repeat" style="background-image: url('imagenes/clouds.jpg');">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-black mb-4" viewBox="0 0 975.036 975.036">
+            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+          </svg>
+          <p class="leading-relaxed mb-6 text-white font-medium">Hermoso lugar para el relax. El entorno es simplemente espectacular, super tranquilo. Las áreas de descanso son variadas y muy comodas. El anfitrion Edwin muy atento y servicial !</p>
+          <a class="inline-flex items-center">
+            <img alt="testimonial" src="imagenes/saroli.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <span class="flex-grow flex flex-col pl-4">
+              <span class="title-font font-medium text-gray-900">Antonio Saroli</span>
+              <span class="text-black text-sm">Visitante</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-800 bg-opacity-40 p-8 rounded bg-cover bg-center bg-no-repeat" style="background-image: url('imagenes/clouds.jpg');">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-black mb-4" viewBox="0 0 975.036 975.036">
+            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+          </svg>
+          <p class="leading-relaxed mb- text-white font-medium">Vacaciones en argentina en esta espectacular villa con todas las comodidades . Los propietarios Edwin y Pilar muy amables y hospitalarios. Sin duda 100% recomendable! </p><br>
+          <a class="inline-flex items-center">
+            <img alt="testimonial" src="imagenes/marin.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <span class="flex-grow flex flex-col pl-4">
+              <span class="title-font font-medium text-gray-900">Javier Marin</span>
+              <span class="text-black text-sm">Huesped</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--FAQS-->
+<section class="px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2">
+  <h1 class="mb-8 text-xl font-bold md:text-3xl">Preguntas Frecuentes</h1>
+  <div class="grid grid-cols-1 gap-0 text-sm md:grid-cols-2 md:gap-5">
+    <div>
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+        <button
+          x-spread="trigger"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+          role="button"
+          aria-controls="faq7"
+          aria-expanded="false"
+        >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Se permiten mascotas en el alojamiento?
+        </button>
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq7">
+          Sí, somos pet-friendly! Sabemos que nuestras mascotas son parte de la familia, y queremos que ellos también disfruten de una estancia maravillosa en nuestra casa de campo. 
+          Pero por favor, avísanos con anticipación cuántos amigos peludos te acompañarán.🐾
+        </div>
+      </div>
+      <br><br><br>
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+        <button
+          x-spread="trigger"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+          role="button"
+          aria-controls="faq8"
+          aria-expanded="false"
+        >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Cómo puedo hacer una reserva y cuáles son los métodos de pago?
+        </button>
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq8">
+         Para realizar una reserva, te invitamos a contactarnos a través de nuestro sitio web, WhatsApp o redes sociales, y nos pondremos en contacto contigo a la brevedad. Aceptamos diversos métodos de pago.
+         Nuestro objetivo es brindarte una experiencia fluida y cómoda.
+        </div>
+      </div>
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+        <button
+          x-spread="trigger"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+          role="button"
+          aria-controls="faq9"
+          aria-expanded="false"
+        >
+      </div>
+    </div>
+    <div>
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+        <button
+          x-spread="trigger"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+          role="button"
+          aria-controls="faq10"
+          aria-expanded="false"         
+        >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Cual es la capacidad de villa cristina?
+        </button>
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq10">
+          Capacidad para alojar cómodamente hasta 15 personas en camas distribuidas en las distintas habitaciones en el interior de la casa. Además, la propiedad cuenta con amplio espacio verde, lo que permite recibir un número adicional de visitantes para actividades al aire libre, reuniones, y eventos.
+          Villa Cristina puede acomodar a un máximo de 120 personas durante el día para actividades. Esto permite que tanto los huéspedes como los visitantes puedan disfrutar del amplio espacio exterior sin sentirse aglomerados.
+        </div>
+      </div>
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+        <button
+          x-spread="trigger"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+          role="button"
+          aria-controls="faq11"
+          aria-expanded="false"       
+        >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          Cómo es el acceso al alojamiento desde la ciudad? 
+        </button>
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq11">
+          Estamos Ubicados en Ruta 11 km 25, Buenos Aires. A 25 minutos de la ciudad de La plata. El acceso es muy sencillo, y contamos con estacionamiento para todos nuestros huéspedes/visitantes. Si tienes alguna duda sobre cómo llegar, no dudes en contactarnos y te ayudaremos a planificar tu estadia.
+        </div>
+      </div>
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+        <button
+          x-spread="trigger"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+          role="button"
+          aria-controls="faq12"
+          aria-expanded="false"
+        >
+          
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Footer-->
+<footer class="flex flex-col items-center justify-between px-4 py-12 mx-auto max-w-7xl md:flex-row">
+  <p class="mb-8 text-sm text-center text-gray-700 md:text-left md:mb-0">© Villa Cristina . All Rights Reserved.</p>
+  <div class="flex items-center space-x-6">
+    <a href="https://www.instagram.com/quinta_villa_cristinarg/">
+      <span class="sr-only">Instagram</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 2500" width="2500" height="2500" class="w-5 h-5" aria-hidden="true">
+        <defs>
+          <radialGradient id="0" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse">
+            <stop offset=".09" stop-color="#fa8f21" />
+            <stop offset=".78" stop-color="#d82d7e" />
+          </radialGradient>
+          <radialGradient id="1" cx="1516.14" cy="2623.81" r="2572.12" gradientUnits="userSpaceOnUse">
+            <stop offset=".64" stop-color="#8c3aaa" stop-opacity="0" />
+            <stop offset="1" stop-color="#8c3aaa" />
+          </radialGradient>
+        </defs>
+        <path
+          d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57"
+          fill="url(#0)"
+        />
+        <path
+          d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57"
+          fill="url(#1)"
+        />
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/p/Quinta-Villa-Cristina-100063540562622/">
+      <span class="sr-only">Facebook</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1298" height="2500" viewBox="88.428 12.828 107.543 207.085" class="w-5 h-5" aria-hidden="true">
+        <path
+          d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z"
+          fill="#3c5a9a"
+        />
+      </svg>
+    </a>
+    
+  </div>
+</footer>
+
+ <script src="https://cdn.lordicon.com/lordicon.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js"></script>   
+ <script src="index.js"></script>
+<!-- Alpine.js -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</body>
+
+</html>
