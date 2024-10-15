@@ -8,7 +8,7 @@
   </tr>
 </table>
 
-## 🏡 **Descripción del Proyecto**
+## 🏡 **Sobre el Proyecto**
 
 **Villa Cristina** es un sitio web dinámico y atractivo diseñado para un alojamiento rural ubicado en Buenos Aires, Argentina. El objetivo principal del proyecto fue crear una sitio intuitivo y accesible, donde los usuarios puedan explorar fácilmente el entorno natural de la Villa Cristina a través de imágenes de alta calidad, mientras navegan por información organizada y detallada sobre los servicios y experiencias que se ofrecen <br>
 🔗 [Visita el sitio web](https://www.villacristinarg.com/)
