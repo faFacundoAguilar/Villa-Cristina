@@ -4,7 +4,7 @@
 <table>
     <tr>
     <td style="padding: 0; width: 60%;"><img src="https://github.com/user-attachments/assets/35a152ce-e922-45b7-a6bf-ea9d462db8c5" alt="Imagen 1" style="width: 100%; height: auto; object-fit: cover;"></td>
-    <td style="padding: 0; width: 60%;"><img src="https://github.com/user-attachments/assets/1286b4d1-b819-469e-bc31-1ff6d772ed21" alt="Imagen 2" style="width: 100%; height: auto; object-fit: cover;"></td>
+    <td style="padding: 0; width: 60%;"><img src="https://github.com/user-attachments/assets/16cce3f6-7939-4158-9911-e2a3e829ef11" alt="Imagen 2" style="width: 100%; height: auto; object-fit: cover;"></td>
   </tr>
 </table>
 
@@ -26,8 +26,6 @@
 ## 📈 **Objetivos del Proyecto**
 
 - **Optimización del SEO**: Implementación de buenas prácticas para mejorar la visibilidad en buscadores.
-
-
 
 
 
