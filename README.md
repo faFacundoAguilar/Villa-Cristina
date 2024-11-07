@@ -1,5 +1,5 @@
 <p align="center">
-<strong>Alojamiento Rural - Villa Crisitna</strong> 
+<strong>Turismo Rural - Villa Cristina</strong> 
 </p>  
 <table>
     <tr>
